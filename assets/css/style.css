@@ -49,7 +49,7 @@ html {
 /* ---main start */
 .main {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   max-width: 768px;
   margin: auto;
   background-color: var(--bg-color);
@@ -109,7 +109,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 .ready-content {
   text-align: center;
