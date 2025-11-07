@@ -132,6 +132,7 @@ html {
   border-radius: 10px;
   font-size: 32px;
   line-height: 32px;
+  transition: all 0.5s;
 }
 
 @media (max-width: 430px) {
@@ -220,6 +221,7 @@ html {
   transition: 0.3s ease;
   width: 100%;
   max-width: 172px;
+  transition: all 0.5s;
 }
 
 @media (max-width: 490px) {
@@ -293,3 +295,14 @@ html {
   }
 }
 /* ---congrats end */
+.next-btn:hover,
+.ready-content .link:hover {
+  box-shadow: 0 6px 14px rgba(255, 255, 255, 0.28);
+}
+
+/* ✅ CLICK: small bottom shadow + press */
+.next-btn:active,
+.ready-content .link:active {
+  transform: scale(0.96);
+  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.22);
+}
