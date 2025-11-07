@@ -192,6 +192,19 @@ html {
   background-color: var(--btn-color);
   color: #fff;
 }
+
+/* Right answer */
+.option-list li.correct {
+  background-color: #39b54a !important;
+  color: #fff !important;
+}
+
+/* Wrong answer */
+.option-list li.wrong {
+  background-color: #ff0000 !important;
+  color: #fff !important;
+}
+
 .next-btn {
   background-color: var(--btn-color);
   color: var(--white-color);
