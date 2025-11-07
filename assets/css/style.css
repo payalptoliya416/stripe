@@ -96,7 +96,6 @@ html {
 .logo img {
   width: 100%;
   max-width: 100px;
-  margin-bottom: 30px;
 }
 @media (max-width: 430px) {
   .logo img {
@@ -109,6 +108,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
 }
 .ready-content {
   text-align: center;
