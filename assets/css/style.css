@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+ul,
+li,
+a,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: "Sohne Buch", sans-serif;
+}
+
+:root {
+  --bg-color: #061b31;
+  --btn-color: #533afd;
+  --white-color: #ffffff;
+  --question-color: #6751fd;
+  --para-color: #131313;
+  --option-bg-color: #e6edf4;
+  --option-color: #8e9bac;
+}
+/* ---main start */
+.main {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 768px;
+  margin: auto;
+  background-color: var(--bg-color);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 640px !important;
+  padding: 0 10px;
+  margin: auto;
+}
+
+/* ---main end-- */
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 600px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 550px !important;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    max-width: 489px !important;
+  }
+}
+
+@media (max-width: 490px) {
+  .main {
+    padding: 24px;
+  }
+}
+
+/* -------------- */
+
+.logo img {
+  width: 100%;
+  max-width: 100px;
+  margin-bottom: 30px;
+}
+@media (max-width: 430px) {
+  .logo img {
+    max-width: 80px;
+  }
+}
+/* ---index pages start */
+.content-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.ready-content {
+  text-align: center;
+}
+.ready-content h2 {
+  font-size: 42px;
+  line-height: 48px;
+  color: var(--white-color);
+  margin-bottom: 40px;
+}
+.ready-content p {
+  color: var(--white-color);
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 50px;
+}
+.ready-content .link {
+  background-color: var(--btn-color);
+  color: var(--white-color);
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+@media (max-width: 430px) {
+  .ready-content p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .ready-content .link {
+    padding: 16px 23px;
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+
+/* ---index pages end */
+
+/* --question -01 start */
+.que-popup {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px 34px;
+  width: 400px;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  min-height: 450px;
+}
+.que-popup h3 {
+  color: var(--question-color);
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.que-popup p {
+  color: var(--para-color);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+.option-list li {
+  background-color: var(--option-bg-color);
+  padding: 14px 18px;
+  color: var(--option-color);
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.option-list li:last-child {
+  margin-bottom: 0;
+}
+
+.option-list li:hover {
+  background-color: #dce3ec;
+}
+
+.option-list li.active {
+  background-color: var(--btn-color);
+  color: #fff;
+}
+.next-btn {
+  background-color: var(--btn-color);
+  color: var(--white-color);
+  padding: 16px 28px;
+  border-radius: 12px;
+  font-size: 26px;
+  line-height: 26px;
+  display: inline-block;
+  border: none;
+  text-align: center;
+  margin: 30px auto 0;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  max-width: 172px;
+}
+
+@media (max-width: 490px) {
+  .que-popup {
+    width: auto;
+    padding: 30px 28px;
+  }
+  .que-popup h3 {
+    margin-bottom: 20px;
+  }
+  .next-btn {
+    max-width: 160px;
+    padding: 14px 28px;
+  }
+}
+/* --question -01 end */
+
+/* ---congrats start */
+.congrats {
+  text-align: center;
+}
+.congrats h2 {
+  font-size: 30px;
+  line-height: 40px;
+  color: var(--white-color);
+  margin-bottom: 50px;
+}
+.congrats h4 {
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+.congrats-btn {
+  background-color: var(--white-color);
+  color: #0c2036;
+  padding: 20px 28px;
+  border-radius: 12px;
+  font-size: 26px;
+  line-height: 26px;
+  display: inline-block;
+  border: none;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  max-width: 220px;
+}
+.tryagain-btn {
+  background-color: var(--btn-color);
+  color: var(--white-color);
+  padding: 16px 28px;
+  border-radius: 12px;
+  font-size: 26px;
+  line-height: 26px;
+  display: inline-block;
+  border: none;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+@media (max-width: 430px) {
+  .congrats h4 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+/* ---congrats end */
