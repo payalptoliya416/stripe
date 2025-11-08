@@ -1,23 +1,28 @@
-const options = document.querySelectorAll(".option-list li");
-let answered = false; // ✅ prevent further clicks
 
-options.forEach(option => {
+document.querySelectorAll(".option-list").forEach(list => {
+  const options = list.querySelectorAll("li");
+  let answered = false; 
+
+  options.forEach(o => {
+    if (o.classList.contains("correct") || o.classList.contains("wrong")) {
+      answered = true; 
+      o.querySelector("input[type='radio']").checked = true; 
+    }
+  });
+
+  options.forEach(option => {
     option.addEventListener("click", () => {
+      if (answered) return;
 
-        if (answered) return; // ✅ already answered → stop further clicks
+      options.forEach(o => {
+        o.classList.remove("active");
+        o.querySelector("input[type='radio']").checked = false;
+      });
 
-        // Remove previous active
-        options.forEach(o => o.classList.remove("active"));
+      option.classList.add("active");
+      option.querySelector("input[type='radio']").checked = true;
 
-        option.classList.add("active");
-
-        // ✅ check answer (example logic)
-        if (option.dataset.answer === "correct") {
-            option.classList.add("correct");
-        } else {
-            option.classList.add("wrong");
-        }
-
-        answered = true; // ✅ lock further clicks
+      answered = true;
     });
+  });
 });

@@ -170,7 +170,7 @@ html {
   line-height: 20px;
   margin-bottom: 30px;
 }
-.option-list li {
+/* .option-list li {
   background-color: var(--option-bg-color);
   padding: 14px 18px;
   color: var(--option-color);
@@ -195,15 +195,62 @@ html {
 }
 
 /* Right answer */
-.option-list li.correct {
+/* .option-list li.correct {
   background-color: #39b54a !important;
   color: #fff !important;
+} */
+
+/* Wrong answer */
+/* .option-list li.wrong {
+  background-color: #ff0000 !important;
+  color: #fff !important;
+}  */
+.option-list {
+  list-style: none;
+  padding: 0;
+}
+
+.option-list li {
+  background-color: var(--option-bg-color, #f2f2f2);
+  padding: 14px 18px;
+  color: var(--option-color, #000);
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.option-list li:last-child {
+  margin-bottom: 0;
+}
+
+.option-list li:hover {
+  background-color: #dce3ec;
+}
+
+/* Hide the radio button circle */
+.option-list input[type="radio"] {
+  display: none;
+}
+
+/* Selected option styling */
+.option-list li.active {
+  background-color: var(--btn-color, #007bff);
+  color: #fff;
+}
+
+/* Right answer */
+.option-list li.correct {
+  background-color: #39b54a ;
+  color: #fff ;
 }
 
 /* Wrong answer */
 .option-list li.wrong {
-  background-color: #ff0000 !important;
-  color: #fff !important;
+  background-color: #ff0000 ;
+  color: #fff;
 }
 
 .next-btn {
